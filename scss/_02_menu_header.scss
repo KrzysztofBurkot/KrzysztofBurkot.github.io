@@ -4,53 +4,64 @@
 h1 {
     text-transform: uppercase;
     font-weight: bold;
-    color: #fff;
 }
 
-h3 {
+h2, h3 {
     text-transform: uppercase;
-    color: #fff;
+}  
+
+.header_wrapper {
+    width: 100%;
+    text-align: center;
 }
 
 #menu {
-    height: 100px;
-    border: none;
-    opacity: 0.5;
+    background-color: rgba(255,255,255,.8);
     #menu_header {
-        a {
-            padding-top: 15px;
-            padding-bottom: 15px;
+        .navbar-brand {
+            height: 100px;
+        }
+        
+        .navbar-toggle {
+            padding: 10px;
+            margin: 35px 15px 35px 0px;
         }
     }
-    ul {
-        height: 100px;
-        a {
-            height: 30px;
-            padding: 35px 25px;
-            font-size: $font_size_menu;  
+    
+    .navbar-collapse {
+        max-height: 600px !important;
+        
+        .nav {
+            a {
+                font-size: 20px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
         }
     }
 }
-
+ 
 #header {
-    @include background_image (url("../img/gif_zastepczy_home.gif"),
-    center,
-    cover);
+    @include background_image (url("../img/gif_zastepczy_home.gif"), center, cover);
     background-attachment: fixed;
     height: 100vh;
-    padding: 30vh 0;
+    padding: 0;
     text-align: center;
     
-    #header_row_1 {
-        height: 100%;
+    #header_container_mask {
+        height: 100vh;
+        padding: 30vh 0;
+        background-color: rgba(255,255,255,.5);
         
-        #header_logo {
-            @include background_image (url("../img/logo_big.png"),
-            center,
-            cover);
-            @include element_center;
-            height: 150px;
-            width: 150px;
+        #header_row_1 {
+            height: 100%;
+
+            #header_logo {
+                @include background_image (url("../img/logo_big.png"), center, cover);
+                @include element_center;
+                height: 150px;
+                width: 150px;
+            }
         }
     }
 } 

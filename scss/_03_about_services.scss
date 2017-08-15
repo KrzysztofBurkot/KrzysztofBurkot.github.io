@@ -1,3 +1,24 @@
 @import "00_zmienne";
-
 @import "01_mixins";
+
+
+#about {
+    padding-bottom: $section_padding_bottom;
+    
+    .about_items {
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .about_items_icons_wrapper {
+            height: 150px;
+            width: 150px;
+            border-radius: 25%;
+            color: $sm_icons_color;
+            background-color: $sm_icons_wrapper_hover;
+            @include element_center;
+            padding: 25px 0;
+            font-size: 70px !important;
+        }
+}  
+ 

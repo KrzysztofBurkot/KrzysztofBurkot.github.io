@@ -1,25 +1,34 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
+
 h1 {
   text-transform: uppercase;
-  font-weight: bold;
-  color: #fff; }
+  font-weight: bold; }
 
-h3 {
-  text-transform: uppercase;
-  color: #fff; }
+h2, h3 {
+  text-transform: uppercase; }
+
+.header_wrapper {
+  width: 100%;
+  text-align: center; }
 
 #menu {
-  height: 100px;
-  border: none;
-  opacity: 0.5; }
-  #menu #menu_header a {
-    padding-top: 15px;
-    padding-bottom: 15px; }
-  #menu ul {
+  background-color: rgba(255, 255, 255, 0.8); }
+  #menu #menu_header .navbar-brand {
     height: 100px; }
-    #menu ul a {
-      height: 30px;
-      padding: 35px 25px;
-      font-size: 22px; }
+  #menu #menu_header .navbar-toggle {
+    padding: 10px;
+    margin: 35px 15px 35px 0px; }
+  #menu .navbar-collapse {
+    max-height: 600px !important; }
+    #menu .navbar-collapse .nav a {
+      font-size: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px; }
 
 #header {
   background-image: url("../img/gif_zastepczy_home.gif");
@@ -28,17 +37,221 @@ h3 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
-  padding: 30vh 0;
+  padding: 0;
   text-align: center; }
-  #header #header_row_1 {
-    height: 100%; }
-    #header #header_row_1 #header_logo {
-      background-image: url("../img/logo_big.png");
+  #header #header_container_mask {
+    height: 100vh;
+    padding: 30vh 0;
+    background-color: rgba(255, 255, 255, 0.5); }
+    #header #header_container_mask #header_row_1 {
+      height: 100%; }
+      #header #header_container_mask #header_row_1 #header_logo {
+        background-image: url("../img/logo_big.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 150px;
+        width: 150px; }
+
+#about {
+  padding-bottom: 10vh; }
+  #about .about_items {
+    text-align: center;
+    padding: 10px; }
+  #about .about_items_icons_wrapper {
+    height: 150px;
+    width: 150px;
+    border-radius: 25%;
+    color: #fff;
+    background-color: #5bc0de;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 25px 0;
+    font-size: 70px !important; }
+
+#team {
+  padding-bottom: 10vh; }
+  #team .team_fotos_wrapper_outer {
+    text-align: center; }
+    #team .team_fotos_wrapper_outer i {
+      color: #fff; }
+    #team .team_fotos_wrapper_outer .social_media_icons_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0px; }
+    #team .team_fotos_wrapper_outer .social_media_icons_wrapper {
+      height: 35px;
+      width: 35px;
+      background-color: #333;
+      border-radius: 25%;
+      margin: 8px;
+      display: flex;
+      flex-direction: column; }
+    #team .team_fotos_wrapper_outer .social_media_icons {
+      margin: auto;
+      font-size: 20px; }
+    #team .team_fotos_wrapper_outer .social_media_icons_wrapper:hover {
+      background-color: #5bc0de;
+      border-radius: 50%;
+      transition: all 0.2s ease-in-out; }
+  #team .team_foto_wrapper {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 25%; }
+  #team #team_foto_1 {
+    background-image: url("../img/piotrek.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  #team #team_foto_2 {
+    background-image: url("../img/pawel.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+#portfolio {
+  padding-bottom: 10vh;
+  text-align: center; }
+  #portfolio .portfolio_item_image_wrapper {
+    height: 400px; }
+    #portfolio .portfolio_item_image_wrapper .portfolio_item_image {
+      width: 100%;
+      height: 75%;
+      position: relative; }
+      #portfolio .portfolio_item_image_wrapper .portfolio_item_image .portfolio_item_mask {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        font-size: 2%; }
+        #portfolio .portfolio_item_image_wrapper .portfolio_item_image .portfolio_item_mask .portfolio_item_mask_content {
+          position: relative;
+          height: 100%; }
+          #portfolio .portfolio_item_image_wrapper .portfolio_item_image .portfolio_item_mask .portfolio_item_mask_content .portfolio_item_mask_content_inner {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            padding: 5px;
+            font-size: 60px; }
+      #portfolio .portfolio_item_image_wrapper .portfolio_item_image .portfolio_item_mask:hover {
+        opacity: 1;
+        transition: all 0.3s ease-in-out; }
+    #portfolio .portfolio_item_image_wrapper #portfolio_item_image_1 {
+      background-image: url("../img/road-sign.jpg");
       background-position: center;
       background-size: cover;
-      background-repeat: no-repeat;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      height: 150px;
-      width: 150px; }
+      background-repeat: no-repeat; }
+    #portfolio .portfolio_item_image_wrapper #portfolio_item_image_2 {
+      background-image: url("../img/cherries.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    #portfolio .portfolio_item_image_wrapper #portfolio_item_image_3 {
+      background-image: url("../img/tomato.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+
+#contact {
+  padding-bottom: 10vh;
+  background-image: url("../img/seethrough_guy_scale.png");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  #contact #contact_right {
+    text-align: center; }
+    #contact #contact_right #contact_wrapper {
+      width: 100%; }
+    #contact #contact_right form {
+      width: 100%;
+      padding: 10px; }
+      #contact #contact_right form .inputs {
+        width: 85%;
+        padding: 10px;
+        margin: 20px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid darkgrey;
+        height: 50px; }
+      #contact #contact_right form textarea {
+        width: 85%;
+        padding: 10px;
+        margin: 20px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid darkgrey;
+        height: 150px; }
+      #contact #contact_right form input::-webkit-input-placeholder, #contact #contact_right form textarea::-webkit-input-placeholder {
+        font-weight: 500;
+        text-transform: uppercase;
+        color: darkgrey; }
+      #contact #contact_right form input::-moz-placeholder, #contact #contact_right form textarea::-moz-placeholder {
+        font-weight: 500;
+        text-transform: uppercase;
+        color: darkgrey; }
+      #contact #contact_right form input::-ms-input-placeholder, #contact #contact_right form textarea::-ms-input-placeholder {
+        font-weight: 500;
+        text-transform: uppercase;
+        color: darkgrey; }
+      #contact #contact_right form input:-moz-placeholder, #contact #contact_right form textarea:-moz-placeholder {
+        font-weight: 500;
+        text-transform: uppercase;
+        color: darkgrey; }
+      #contact #contact_right form button {
+        background-color: forestgreen;
+        padding: 15px 20px;
+        margin: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 5%;
+        border: 0px solid; }
+
+#footer {
+  background-color: lightgray; }
+  #footer .copyright {
+    text-align: center;
+    line-height: 100%; }
+    #footer .copyright p {
+      margin: 0;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      font-size: 16px; }
+  #footer .footer_center {
+    text-align: center; }
+    #footer .footer_center i {
+      color: #fff; }
+    #footer .footer_center .social_media_icons_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0px; }
+    #footer .footer_center .social_media_icons_wrapper {
+      height: 35px;
+      width: 35px;
+      background-color: #333;
+      border-radius: 25%;
+      margin: 8px;
+      display: flex;
+      flex-direction: column; }
+    #footer .footer_center .social_media_icons {
+      margin: auto;
+      font-size: 20px; }
+    #footer .footer_center .social_media_icons_wrapper:hover {
+      background-color: #5bc0de;
+      border-radius: 50%;
+      transition: all 0.2s ease-in-out; }
